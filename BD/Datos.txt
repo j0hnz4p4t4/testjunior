@@ -9,16 +9,15 @@ VALUES ( 11000,'Cundinamarca'),
  
 
 INSERT INTO  `BD_John`.`ciudad` (
- `id`,
- `idDepartamento`,
+  `idDepartamento`,
  `descripcion` ) 
 
-VALUES ( 11001,11000,'Bogota' ),
-       ( 11002,11000,'Mosquera' ),
-       (12001,12000,'Villavicencio'),
-       (12002,12000,'Acacias'),
-       (13001,13000,'Medellin'),
-       (13002,13000,'Envigado');
+VALUES ( 11000,'Bogota' ),
+       ( 11000,'Mosquera' ),
+       (12000,'Villavicencio'),
+       (12000,'Acacias'),
+       (13000,'Medellin'),
+       (13000,'Envigado');
   
   
 
