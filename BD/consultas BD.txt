@@ -1,0 +1,35 @@
+
+SELECT d.descripcion,c.descripcion FROM departamento AS d
+INNER JOIN ciudad AS c ON d.id=c.idDepartamento;
+
+
+SELECT c.descripcion AS 'Ciudad',  COUNT(p.id) AS 'Cant_Personas'FROM  persona AS p 
+ INNER JOIN ciudad AS c ON p.idCiudad=c.id GROUP BY c.id;
+
+SELECT d.descripcion AS 'Departamento' FROM ciudad AS c
+INNER JOIN persona AS p ON c.id=p.idCiudad INNER JOIN departamento AS d ON d.id=c.idDepartamento WHERE p.numeroDocumento='101020';
+
+SELECT t.descripcion  FROM tipoDocumento AS t LEFT JOIN persona AS p ON t.id=p.idTipoDocumento WHERE p.idTipoDocumento IS NULL ;
+
+SELECT  t.descripcion AS 'Tipo Documento', COUNT(p.id) AS 'Cant_Personas' FROM  persona AS p 
+ INNER JOIN tipoDocumento AS t ON p.idTipoDocumento=t.id GROUP BY t.id;
+
+Realice una vista donde se listen las  personas e incluya la descripción del tipo de documento,descripción del departamento y descripción de la ciudad.
+
+CREATE VIEW descripcionPersona AS
+
+
+SELECT 
+p.id,
+p.nombre,
+p.apellido,
+p.numeroDocumento,
+t.descripcion AS 'TipoDocumento',
+d.descripcion AS 'Departamento',
+c.descripcion AS 'ciudad'
+
+FROM persona AS p 
+INNER JOIN tipoDocumento AS t ON t.id=p.idTipoDocumento 
+INNER JOIN ciudad AS c ON p.idCiudad=c.id 
+INNER JOIN departamento AS d ON d.id=c.idDepartamento ;
+

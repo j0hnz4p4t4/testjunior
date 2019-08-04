@@ -1,0 +1,26 @@
+.form-login{
+
+    width: 300px;
+    margin: 50px auto;
+
+}
+.table-persona{
+
+    width: 70%;
+    margin: 50px auto;
+
+}
+.form-insert{
+
+    width: 40%;
+    margin: 50px auto;
+
+}
+.nav-item{
+  margin:20px !important;
+}
+ header{
+background-color:#2BF4A5;
+
+}
+.alert{ color:#FF0000;}
